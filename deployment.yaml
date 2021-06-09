@@ -7,6 +7,9 @@ metadata:
   name: php-nginx-deployment
   labels:
           app: php-nginx
+env:
+  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+  IMAGE: php-nginx
 spec:
   replicas: 3
   selector:
@@ -29,7 +32,7 @@ spec:
 
     containers:
     # Our PHP-FPM application
-      - image: gcr.io/fluid-axe-315707/php-nginx
+      - image: "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
         name: php
         volumeMounts:
           - name: shared-files
