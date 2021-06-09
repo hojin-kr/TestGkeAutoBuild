@@ -11,6 +11,6 @@ RUN pecl install redis-5.1.1 \
     && pecl install xdebug-3.0.3 \
     && pecl install memcached \
     && docker-php-ext-enable redis xdebug memcached
-ADD / home/app
-ADD / home/app/code
+ADD / /home/app
+ADD / /home/app/code
 COPY ./code/index.php /home/app/code
