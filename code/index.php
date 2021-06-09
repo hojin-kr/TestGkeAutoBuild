@@ -1,2 +1,2 @@
 <?php
-echo "Test Auto bulid Deploy  v0.0.6";
+echo "Test Auto bulid Deploy  v0.0.7";
