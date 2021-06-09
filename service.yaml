@@ -14,5 +14,5 @@ spec:
   selector:
     app: "php-nginx"
   type: "LoadBalancer"
-  loadBalancerIP: ""
+  #loadBalancerIP: ""
 
