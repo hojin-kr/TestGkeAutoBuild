@@ -29,7 +29,7 @@ spec:
 
     containers:
     # Our PHP-FPM application
-      - image: gcr.io/fluid-axe-315707/php-nginx:${{$GITHUB_SHA}}
+      - image: gcr.io/fluid-axe-315707/php-nginx:${{GITHUB_SHA}}
         name: php
         volumeMounts:
           - name: shared-files
