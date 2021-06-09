@@ -11,9 +11,7 @@ spec:
   - protocol: "TCP"
     port: 80
     targetPort: 80
-  clusterIP: "34.69.160.170"
   selector:
     app: "php-nginx"
   type: "LoadBalancer"
-  #loadBalancerIP: ""
 
