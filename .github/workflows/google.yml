@@ -13,10 +13,10 @@
 name: Build and Deploy to GKE
 
 on:
-  push:
-    branches: [main]
-  #release:
-  #  types: [created]
+  #push:
+  #  branches: [main]
+  release:
+    types: [created]
     
 
 env:
@@ -24,7 +24,7 @@ env:
   GKE_CLUSTER: cluster-1    # TODO: update to cluster name
   GKE_ZONE: us-central1-c   # TODO: update to cluster zone
   DEPLOYMENT_NAME: php-nginx-deployment # TODO: update to deployment name
-  IMAGE: static-site
+  IMAGE: php-nginx
 
 jobs:
   setup-build-publish-deploy:
