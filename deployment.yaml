@@ -29,7 +29,7 @@ spec:
 
     containers:
     # Our PHP-FPM application
-      - image: gcr.io/${{ secrets.GKE_PROJECT }}/php-nginx:${ GITHUB_SHA }
+      - image: gcr.io/$(secrets.GKE_PROJECT)/php-nginx:$(GITHUB_SHA)
         name: php
         volumeMounts:
           - name: shared-files
