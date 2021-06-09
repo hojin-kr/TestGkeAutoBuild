@@ -1,6 +1,6 @@
 commonLabels:
  app: php-nginx
 resources:
- - deployment.yml
+ - deployment.yaml
  - configmap.yaml
  - service.yaml
